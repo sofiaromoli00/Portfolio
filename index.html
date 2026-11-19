@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sofia Romoli | Architettura</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Custom Configuration and Styles -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        black: '#111111',
+                        white: '#FDFDFD',
+                        gray: {
+                            200: '#E5E5E5',
+                            300: '#D4D4D4',
+                            500: '#737373',
+                            900: '#171717'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: theme('colors.white');
+            color: theme('colors.black');
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Custom Scrollbar for horizontal scrolling projects */
+        .project-scroll::-webkit-scrollbar {
+            height: 6px;
+        }
+        .project-scroll::-webkit-scrollbar-track {
+            background: #f1f1f1; 
+        }
+        .project-scroll::-webkit-scrollbar-thumb {
+            background: #d4d4d4; 
+            border-radius: 10px;
+        }
+        .project-scroll::-webkit-scrollbar-thumb:hover {
+            background: #a3a3a3; 
+        }
+
+        /* Smooth scrolling for anchor links */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .img-hover {
+            transition: opacity 0.3s ease;
+        }
+        .img-hover:hover {
+            opacity: 0.85;
+        }
+    </style>
+</head>
+<body class="font-sans">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white/90 backdrop-blur-md z-50 border-b border-gray-200">
+        <div class="max-w-screen-2xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#home" class="text-xl font-medium tracking-tight uppercase">Sofia Romoli</a>
+            <div class="space-x-8 text-sm uppercase tracking-widest hidden md:block text-gray-500">
+                <a href="#portfolio" class="hover:text-black transition-colors">Portfolio</a>
+                <a href="#fotografia" class="hover:text-black transition-colors">Fotografia</a>
+                <a href="#info" class="hover:text-black transition-colors">Info & Contatti</a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden">
+                <button id="mobile-menu-btn" class="text-black uppercase tracking-widest text-sm">Menu</button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden bg-white border-t border-gray-200 px-6 py-4 md:hidden flex flex-col space-y-4 text-sm uppercase tracking-widest text-gray-500">
+            <a href="#portfolio" class="mobile-link hover:text-black transition-colors">Portfolio</a>
+            <a href="#fotografia" class="mobile-link hover:text-black transition-colors">Fotografia</a>
+            <a href="#info" class="mobile-link hover:text-black transition-colors">Info & Contatti</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="h-screen flex items-center justify-center px-6">
+        <div class="text-center">
+            <h1 class="font-serif text-5xl md:text-7xl mb-4 italic">Sofia Romoli</h1>
+            <p class="text-sm uppercase tracking-[0.3em] text-gray-500">Architettura</p>
+        </div>
+    </header>
+
+    <!-- MAIN PORTFOLIO -->
+    <main id="portfolio" class="pt-24 pb-20 border-t border-gray-200">
+        <div class="max-w-screen-2xl mx-auto px-6">
+            <h2 class="text-3xl font-medium tracking-tight mb-16 uppercase">Portfolio</h2>
+
+            <!-- ================= THEME 1: ARCHITETTONICO ================= -->
+            <section class="mb-32">
+                <h3 class="text-xs font-semibold uppercase tracking-[0.2em] text-gray-500 mb-12 border-b border-gray-200 pb-2">01 — Architettonico</h3>
+
+                <!-- Project: Bridge -->
+                <div class="mb-20">
+                    <div class="mb-6 flex flex-col md:flex-row md:items-baseline md:justify-between">
+                        <h4 class="text-xl font-medium"><span class="font-semibold">Bridge:</span> edificio a ponte</h4>
+                        <p class="text-sm text-gray-500 uppercase tracking-widest mt-2 md:mt-0">Belgrado, 2025</p>
+                    </div>
+                    <p class="text-sm text-gray-600 mb-8 font-light leading-relaxed max-w-4xl">Edificio residenziale a campata sospesa di quarantatré metri sorretto da tre strutture reticolari. Nei due appoggi si collocano le funzioni pubbliche, mentre la porzione sospesa accoglie i duplex; il progetto integra il disegno architettonico alla verifica strutturale, dall'analisi dei carichi e degli schemi statici fino a trave Gerber, reticolare e controventi.</p>
+                    <p class="text-xs text-gray-500 mb-8 tracking-wide">
+                        <span class="uppercase tracking-widest text-gray-400 mr-2">Progetto di gruppo:</span>
+                        Sofia Romoli, Cecilia Moretti, Linda Riva, Giulia Vennarecci
+                    </p>
+                    <div class="flex overflow-x-auto project-scroll gap-6 pb-6 snap-x">
+                        <!-- 1 Intro Photos -->
+                        <div class="snap-start shrink-0 w-[90vw] md:w-[700px]">
+                            <img src="." class="w-full h-[500px] object-cover mb-3 border border-gray-100 img-hover" alt="Concept">
+                            <p class="text-xs text-gray-500 italic mt-2">Modellino</p>
+                        </div>
+                        
+                        <!-- 13 Tavole -->
+                        <div class="snap-start shrink-0 w-[90vw] md:w-[700px]">
+                            <img src="TAV_5.jpg" class="w-full h-[500px] object-cover mb-3 border border-gray-100 img-hover" alt="Tavola 1">
+                            <p class="text-xs text-gray-500 italic mt-2">Assonometria generale</p>
+                        </div>
+
+                        <div class="snap-start shrink-0 w-[90vw] md:w-[700px]">
+                            <img src="TAV_8.2.jpg" class="w-full h-[500px] object-cover mb-3 border border-gray-100 img-hover" alt="Tavola 2">
+                            <p class="text-xs text-gray-500 italic mt-2">Pianta piano terra, scala 1:200</p>
+                        </div>
+                        
+                        <div class="snap-start shrink-0 w-[90vw] md:w-[700px]">
+                            <img src="TAV_8.1.jpg" class="w-full h-[500px] object-cover mb-3 border border-gray-100 img-hover" alt="Tavola 3">
+                            <p class="text-xs text-gray-500 italic mt-2">Piante piani primo, secondo e terzo, scala 1:200</p>
+                        </div>
+                        
+                        <div class="snap-start shrink-0 w-[90vw] md:w-[700px]">
+                            <img src="TAV_8.3.jpg" class="w-full h-[500px] object-cover mb-3 border border-gray-100 img-hover" alt="Tavola 4">
+                            <p class="text-xs text-gray-500 italic mt-2">Sezione prospettica duplex</p>
+                        </div>
+                        
+                        <div class="snap-start shrink-0 w-[90vw] md:w-[700px]">
+                            <img src="TAV_8.5.jpg" class="w-full h-[500px] object-cover mb-3 border border-gray-100 img-hover" alt="Tavola 5">
+                            <p class="text-xs text-gray-500 italic mt-2">Sezioni, scala 1:200</p>
+                        </div>
+                        
+                        <div class="snap-start shrink-0 w-[90vw] md:w-[700px]">
+                            <img src="TAV_8.jpg" class="w-full h-[500px] object-cover mb-3 border border-gray-100 img-hover" alt="Tavola 6">
+                            <p class="text-xs text-gray-500 italic mt-2">Prospetti, scala 1:200</p>
+                        </div>
+                        
+                        <div class="snap-start shrink-0 w-[90vw] md:w-[700px]">
+                            <img src="TAV_8.7.jpg" class="w-full h-[500px] object-cover mb-3 border border-gray-100 img-hover" alt="Tavola 7">
+                            <p class="text-xs text-gray-500 italic mt-2">Viste</p>
+                        </div>
+                        
+                        <div class="snap-start shrink-0 w-[90vw] md:w-[700px]">
+                            <img src="TAVOLA 1 STRUTT.jpg" class="w-full h-[500px] object-cover mb-3 border border-gray-100 img-hover" alt="Tavola 8">
+                            <p class="text-xs text-gray-500 italic mt-2">Calcoli strutturali, schemi</p>
+                        </div>
+                        
+                        <div class="snap-start shrink-0 w-[90vw] md:w-[700px]">
+                            <img src="TAVOLA 2 STRUTT.jpg" class="w-full h-[500px] object-cover mb-3 border border-gray-100 img-hover" alt="Tavola 9">
+                            <p class="text-xs text-gray-500 italic mt-2">Calcoli strutturali, analisi dei carichi</p>
+                        </div>
+                        
+                        <div class="snap-start shrink-0 w-[90vw] md:w-[700px]">
+                            <img src="TAVOLA 3 STRUTT.jpg" class="w-full h-[500px] object-cover mb-3 border border-gray-100 img-hover" alt="Tavola 10">
+                            <p class="text-xs text-gray-500 italic mt-2">Calcoli strutturali, trave Gerber</p>
+                        </div>
+                        
+                        <div class="snap-start shrink-0 w-[90vw] md:w-[700px]">
+                            <img src="TAVOLA 4 STRUTT.jpg" class="w-full h-[500px] object-cover mb-3 border border-gray-100 img-hover" alt="Tavola 11">
+                            <p class="text-xs text-gray-500 italic mt-2">Calcoli strutturali, schemi statici</p>
+                        </div>
+                        
+                        <div class="snap-start shrink-0 w-[90vw] md:w-[700px]">
+                            <img src="TAVOLA 5 STRUTT.jpg" class="w-full h-[500px] object-cover mb-3 border border-gray-100 img-hover" alt="Tavola 12">
+                            <p class="text-xs text-gray-500 italic mt-2">Calcoli strutturali trave reticolare</p>
+                        </div>
+                        
+                        <div class="snap-start shrink-0 w-[90vw] md:w-[700px]">
+                            <img src="TAVOLA 6 STRUTT.jpg" class="w-full h-[500px] object-cover mb-3 border border-gray-100 img-hover" alt="Tavola 13">
+                            <p class="text-xs text-gray-500 italic mt-2">Calcoli strutturali controventi 1</p>
+                        </div>
+                        <div class="snap-start shrink-0 w-[90vw] md:w-[700px]">
+                            <img src="TAVOLA 6.1 STRUTT.jpg" class="w-full h-[500px] object-cover mb-3 border border-gray-100 img-hover" alt="Tavola 14">
+                            <p class="text-xs text-gray-500 italic mt-2">Calcoli strutturali controventi 2</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project: Line -->
+                <div class="mb-20">
+                    <div class="mb-6 flex flex-col md:flex-row md:items-baseline md:justify-between">
+                        <h4 class="text-xl font-medium"><span class="font-semibold">Line:</span> appartamenti modulari</h4>
+                        <p class="text-sm text-gray-500 uppercase tracking-widest mt-2 md:mt-0">Roma, 2025</p>
+                    </div>
+                    <p class="text-sm text-gray-600 mb-8 font-light leading-relaxed max-w-4xl">Complesso residenziale composto da tre edifici a corte aperta a "C" sviluppati lungo un asse centrale, dato da una passerella in parte sopraelevata che attraversa il lotto, come una spina dorsale. Gli edifici ospitano appartamenti duplex e unifamiliari nei piani superiori mentre al piano terra troviamo residenze e atelier per artisti che affacciano sulla corte pubblica. L'ultimo edificio ospita invece alloggi per studenti, con annessi servizi, completando l'impianto con elaborati tecnici e analisi economica di progetto.</p>
+                    <p class="text-xs text-gray-500 mb-8 tracking-wide">
+                        <span class="uppercase tracking-widest text-gray-400 mr-2">Progetto di gruppo:</span>
+                        Sofia Romoli, Santini Beatrice, Francesco Vinau
+                    </p>
+                    <div class="flex overflow-x-auto project-scroll gap-6 pb-6 snap-x">
+                        <!-- 2 Intro Photos -->
+                        <div class="snap-start shrink-0 w-[90vw] md:w-[700px]">
+                            <img src="modellino.jpg" class="w-full h-[500px] object-cover mb-3 border border-gray-100 img-hover" alt="Concept">
+                            <p class="text-xs text-gray-500 italic mt-2">Modellino</p>
+                        </div>
+                        <div class="snap-start shrink-0 w-[90vw] md:w-[700px]">
+                            <img src="PL.jpg" class="w-full h-[500px] object-cover mb-3 border border-gray-100 img-hover" alt="Concept">
+                            <p class="text-xs text-gray-500 italic mt-2">Modellino</p>
+                        </div>
+                       <!-- 13 Tavole -->
+                       <div class="snap-start shrink-0 w-[90vw] md:w-[700px]">
+                           <img src="TAV_1.3.jpg" class="w-full h-[500px] object-cover mb-3 border border-gray-100 img-hover" alt="Tavola 1">
+                           <p class="text-xs text-gray-500 italic mt-2">Contesto Ponte Mammolo</p>
+                       </div>
+
+                       <div class="snap-start shrink-0 w-[90vw] md:w-[700px]">
+                           <img src="TAV_2.jpg" class="w-full h-[500px] object-cover mb-3 border border-gray-100 img-hover" alt="Tavola 2">
+                           <p class="text-xs text-gray-500 italic mt-2">Pianta piano interrato, scala 1:500</p>
+                       </div>
+                       
+                       <div class="snap-start shrink-0 w-[90vw] md:w-[700px]">
+                           <img src="TAV_2.1.jpg" class="w-full h-[500px] object-cover mb-3 border border-gray-100 img-hover" alt="Tavola 3">
+                           <p class="text-xs text-gray-500 italic mt-2">Pianta piano terra, scala 1:500</p>
+                       </div>
+                       
+                       <div class="snap-start shrink-0 w-[90vw] md:w-[700px]">
+                           <img src="TAV_3.1.jpg" class="w-full h-[500px] object-cover mb-3 border border-gray-100 img-hover" alt="Tavola 4">
+                           <p class="text-xs text-gray-500 italic mt-2">Pianta piano terra, scala 1:200</p>
+                       </div>
+                       
+                       <div class="snap-start shrink-0 w-[90vw] md:w-[700px]">
+                           <img src="TAV_3.2.jpg" class="w-full h-[500px] object-cover mb-3 border border-gray-100 img-hover" alt="Tavola 5">
+                           <p class="text-xs text-gray-500 italic mt-2">Pianta piano primo, scala 1:200</p>
+                       </div>
+                       
+                       <div class="snap-start shrink-0 w-[90vw] md:w-[700px]">
+                           <img src="TAV_3.3.jpg" class="w-full h-[500px] object-cover mb-3 border border-gray-100 img-hover" alt="Tavola 6">
+                           <p class="text-xs text-gray-500 italic mt-2">Pianta piano secondo, scala 1:200</p>
+                       </div>
+                       
+                       <div class="snap-start shrink-0 w-[90vw] md:w-[700px]">
+                           <img src="TAV_3.4.jpg" class="w-full h-[500px] object-cover mb-3 border border-gray-100 img-hover" alt="Tavola 7">
+                           <p class="text-xs text-gray-500 italic mt-2">Sezioni, scala 1:200</p>
+                       </div>
+                       
+                       <div class="snap-start shrink-0 w-[90vw] md:w-[700px]">
+                           <img src="TAV_3.5.jpg" class="w-full h-[500px] object-cover mb-3 border border-gray-100 img-hover" alt="Tavola 8">
+                           <p class="text-xs text-gray-500 italic mt-2">Sezioni, scala 1:200</p>
+                       </div>
+                       
+                       <div class="snap-start shrink-0 w-[90vw] md:w-[700px]">
+                           <img src="TAV_3.6.jpg" class="w-full h-[500px] object-cover mb-3 border border-gray-100 img-hover" alt="Tavola 9">
+                           <p class="text-xs text-gray-500 italic mt-2">Sezioni, scala 1:500</p>
+                       </div>
+                       
+                       <div class="snap-start shrink-0 w-[90vw] md:w-[700px]">
+                           <img src="TAV_4.1.jpg" class="w-full h-[500px] object-cover mb-3 border border-gray-100 img-hover" alt="Tavola 10">
+                           <p class="text-xs text-gray-500 italic mt-2">Disegni tecnici</p>
+                       </div>
+                       
+                       <div class="snap-start shrink-0 w-[90vw] md:w-[700px]">
+                           <img src="TAV_7.1.jpg" class="w-full h-[500px] object-cover mb-3 border border-gray-100 img-hover" alt="Tavola 11">
+                           <p class="text-xs text-gray-500 italic mt-2">Vista prospettica passerella</p>
+                       </div>
+                       
+                       <div class="snap-start shrink-0 w-[90vw] md:w-[700px]">
+                           <img src="TAV_7.jpg" class="w-full h-[500px] object-cover mb-3 border border-gray-100 img-hover" alt="Tavola 12">
+                           <p class="text-xs text-gray-500 italic mt-2">Vista prospettica corte aperta</p>
+                       </div>
+                        <!-- 1 Book -->
+                        <div class="snap-start shrink-0 w-[80vw] md:w-[400px]">
+                            <!-- AGGIUNGI QUESTO TAG <a> CHE PUNTA AL TUO PDF -->
+                            <a href="Romoli_Santini_Vinau copia.pdf" target="_blank" class="block group">
+                                <img src="copertina.jpg"
+                                     class="w-full h-[500px] object-cover mb-3 border border-gray-100 img-hover group-hover:opacity-90 transition-opacity"
+                                     alt="Book">
+                            </a>
+                            <p class="text-xs text-gray-500">Book</p>
+                        </div>
+                </div>
+
+                <!-- Project: Spirala -->
+                <div class="mb-20">
+                    <div class="mb-6 flex flex-col md:flex-row md:items-baseline md:justify-between">
+                        <h4 class="text-xl font-medium"><span class="font-semibold">Spirala:</span> museo</h4>
+                        <p class="text-sm text-gray-500 uppercase tracking-widest mt-2 md:mt-0">Roma, 2023-24</p>
+                    </div>
+                    <p class="text-sm text-gray-600 mb-8 font-light leading-relaxed max-w-4xl">Centro civico e museo di quartiere a Testaccio, articolato in blocchi semi-separati, con all'interno: una biblioteca e spazi polifunzionali dedicati a workshop, nel volume principale; mentre il museo è sviluppato tramite un percorso circolare a spirale, nel piano superiore e nel blocco semi staccato. L'impianto dell'edificio consente di creare una piazza pubblica attraversabile. Nello sviluppo, il progetto è stato ripensato in chiave tecnica, utilizzando una struttura portante in XLAM rivestita.</p>
+                    <p class="text-xs text-gray-500 mb-8 tracking-wide">
+                        <span class="uppercase tracking-widest text-gray-400 mr-2">Progetto di gruppo:</span>
+                        Sofia Romoli, Fabiola Polani
+                    </p>
+                    <div class="flex overflow-x-auto project-scroll gap-6 pb-6 snap-x">
+                        <!-- 2 Intro Photos -->
+                        <div class="snap-start shrink-0 w-[90vw] md:w-[700px]">
+                            <img src="WhatsApp Image 2026-11-19 at 13.47.26.jpeg" class="w-full h-[500px] object-cover mb-3 border border-gray-100 img-hover" alt="Concept">
+                            <p class="text-xs text-gray-500 italic mt-2">Modellino</p>
+                        </div>
+                      
+                        <!-- 12 Tavole -->
+                        <div class="snap-start shrink-0 w-[90vw] md:w-[700px]">
+                            <img src="TAV_1.jpg" class="w-full h-[500px] object-cover mb-3 border border-gray-100 img-hover" alt="Tavola 1">
+                            <p class="text-xs text-gray-500 italic mt-2">Inquadramento</p>
+                        </div>
+
+                        <div class="snap-start shrink-0 w-[90vw] md:w-[700px]">
+                            <img src="TAV_1.1.jpg" class="w-full h-[500px] object-cover mb-3 border border-gray-100 img-hover" alt="Tavola 2">
+                            <p class="text-xs text-gray-500 italic mt-2">Assonometria generale</p>
+                        </div>
+                        
+                        <div class="snap-start shrink-0 w-[90vw] md:w-[700px]">
+                            <img src="TAV_1.2.jpg" class="w-full h-[500px] object-cover mb-3 border border-gray-100 img-hover" alt="Tavola 3">
+                            <p class="text-xs text-gray-500 italic mt-2">Vista prospettica da Via Ghiberti</p>
+                        </div>
+                        
+                        <div class="snap-start shrink-0 w-[90vw] md:w-[700px]">
+                            <img src="TAV_3.jpg" class="w-full h-[500px] object-cover mb-3 border border-gray-100 img-hover" alt="Tavola 4">
+                            <p class="text-xs text-gray-500 italic mt-2">Pianta piano terra, scala 1:200</p>
+                        </div>
+                        
+                        <div class="snap-start shrink-0 w-[90vw] md:w-[700px]">
+                            <img src="TAV_4.jpg" class="w-full h-[500px] object-cover mb-3 border border-gray-100 img-hover" alt="Tavola 5">
+                            <p class="text-xs text-gray-500 italic mt-2">Pianta piano primo, scala 1:200</p>
+                        </div>
+                        
+                        <div class="snap-start shrink-0 w-[90vw] md:w-[700px]">
+                            <img src="TAV_5.1.jpg" class="w-full h-[500px] object-cover mb-3 border border-gray-100 img-hover" alt="Tavola 6">
+                            <p class="text-xs text-gray-500 italic mt-2">Pianta piano secondo, scala 1:200</p>
+                        </div>
+                        
+                        <div class="snap-start shrink-0 w-[90vw] md:w-[700px]">
+                            <img src="TAV_6.1.jpg" class="w-full h-[500px] object-cover mb-3 border border-gray-100 img-hover" alt="Tavola 7">
+                            <p class="text-xs text-gray-500 italic mt-2">Sezioni A-A e B-B</p>
+                        </div>
+                        
+                        <div class="snap-start shrink-0 w-[90vw] md:w-[700px]">
+                            <img src="TAV_0.jpg" class="w-full h-[500px] object-cover mb-3 border border-gray-100 img-hover" alt="Tavola 8">
+                            <p class="text-xs text-gray-500 italic mt-2">Pianta esecutiva</p>
+                        </div>
+                        
+                        <div class="snap-start shrink-0 w-[90vw] md:w-[700px]">
+                            <img src="TAV_0.1.jpg" class="w-full h-[500px] object-cover mb-3 border border-gray-100 img-hover" alt="Tavola 9">
+                            <p class="text-xs text-gray-500 italic mt-2">Sezione tecnologica A-A</p>
+                        </div>
+                        
+                        <div class="snap-start shrink-0 w-[90vw] md:w-[700px]">
+                            <img src="TAV_0.2.jpg" class="w-full h-[500px] object-cover mb-3 border border-gray-100 img-hover" alt="Tavola 10">
+                            <p class="text-xs text-gray-500 italic mt-2">Sezione tecnologica C-C e dettagli rivestimento facciata</p>
+                        </div>
+                        
+                        <div class="snap-start shrink-0 w-[90vw] md:w-[700px]">
+                            <img src="TAV_0.4.jpg" class="w-full h-[500px] object-cover mb-3 border border-gray-100 img-hover" alt="Tavola 11">
+                            <p class="text-xs text-gray-500 italic mt-2">Sezione tecnologica B-B</p>
+                        </div>
+                        <!-- 1 Book -->
+                        <div class="snap-start shrink-0 w-[80vw] md:w-[400px]">
+                            <!-- AGGIUNGI QUESTO TAG <a> CHE PUNTA AL TUO PDF -->
+                            <a
+                                href="Catalogo.pdf" target="_blank" class="block group">
+                                <img src="materiali.jpg"
+                                     class="w-full h-[500px] object-cover mb-3 border border-gray-100 img-hover group-hover:opacity-90 transition-opacity"
+                                     alt="Book">
+                            </a>
+                            <p class="text-xs text-gray-500">Book</p>
+                        </div>
+                </div>
+
+                <!-- Project: Parco delle Arti -->
+                <div class="mb-20">
+                    <div class="mb-6 flex flex-col md:flex-row md:items-baseline md:justify-between">
+                        <h4 class="text-xl font-medium"><span class="font-semibold">Parco delle Arti:</span> rifunzionalizzazione</h4>
+                        <p class="text-sm text-gray-500 uppercase tracking-widest mt-2 md:mt-0">Torino, 2025</p>
+                    </div>
+                    <p class="text-sm text-gray-600 mb-8 font-light leading-relaxed max-w-4xl">Il progetto interviene sull'ex zoo di Torino, oggi Parco Michelotti. L'obiettivo non è sostituire l'esistente ma riattivare i manufatti e i percorsi, capaci di generare nuovi eventi all'interno del parco. Le gabbie vengono reinterpretate come dispositivi aperti che rendono possibile l'insediamento di attività culturali. Il principio di minima interferenza è assunto come criterio progettuale. Il programma funzionale si articola in due sistemi: un polo dedicato alle attività culturali e di intrattenimento e un polo dedicato alla ristorazione; tra questi si crea un sistema di piazza semi-coperta, pensata per distaccarsi dall'esistente.</p>
+                    <p class="text-xs text-gray-500 mb-8 tracking-wide">
+                        <span class="uppercase tracking-widest text-gray-400 mr-2">Progetto di gruppo:</span>
+                        Sofia Romoli, Cecilia Moretti, Samuele Ferro
+                    </p>
+                    <div class="flex overflow-x-auto project-scroll gap-6 pb-6 snap-x">
+                        <!-- 2 Intro Photos -->
+                        <div class="snap-start shrink-0 w-[90vw] md:w-[700px]">
+                            <img src="PHOTO-2026-11-19-12-44-43 10.jpg" class="w-full h-[500px] object-cover mb-3 border border-gray-100 img-hover" alt="Concept">
+                            <p class="text-xs text-gray-500 italic mt-2">Concept</p>
+                        </div>
+                        <div class="snap-start shrink-0 w-[90vw] md:w-[700px]">
+                            <img src="PHOTO-2026-11-19-13-45-39 3.jpg" class="w-full h-[500px] object-cover mb-3 border border-gray-100 img-hover" alt="Concept">
+                            <p class="text-xs text-gray-500 italic mt-2">Modellino</p>
+                        </div>
+                        <!-- 9 Tavole -->
+                        <div class="snap-start shrink-0 w-[90vw] md:w-[700px]">
+                            <img src="TAV_9.jpg" class="w-full h-[500px] object-cover mb-3 border border-gray-100 img-hover" alt="Tavola 1">
+                            <p class="text-xs text-gray-500 italic mt-2">Contesto, masterplane e sezione</p>
+                        </div>
+                        
+                        <div class="snap-start shrink-0 w-[90vw] md:w-[700px]">
+                            <img src="TAV_9.1.jpg" class="w-full h-[500px] object-cover mb-3 border border-gray-100 img-hover" alt="Tavola 2">
+                            <p class="text-xs text-gray-500 italic mt-2">Assonometria generale</p>
+                        </div>
+                        
+                        <div class="snap-start shrink-0 w-[90vw] md:w-[700px]">
+                            <img src="Tav_viste.jpg" class="w-full h-[500px] object-cover mb-3 border border-gray-100 img-hover" alt="Tavola 3">
+                            <p class="text-xs text-gray-500 italic mt-2">Viste</p>
+                        </div>
+                        
+                        <div class="snap-start shrink-0 w-[90vw] md:w-[700px]">
+                            <img src="Tav_9.10.jpg" class="w-full h-[500px] object-cover mb-3 border border-gray-100 img-hover" alt="Tavola 4">
+                            <p class="text-xs text-gray-500 italic mt-2">Pianta piano terra, scala 1:200</p>
+                        </div>
+                        
+                        <div class="snap-start shrink-0 w-[90vw] md:w-[700px]">
+                            <img src="TAV_9.6.jpg" class="w-full h-[500px] object-cover mb-3 border border-gray-100 img-hover" alt="Tavola 5">
+                            <p class="text-xs text-gray-500 italic mt-2">Dettagli tecnici</p>
+                        </div>
+                        
+                        <div class="snap-start shrink-0 w-[90vw] md:w-[700px]">
+                            <img src="TAV_9.7.jpg" class="w-full h-[500px] object-cover mb-3 border border-gray-100 img-hover" alt="Tavola 6">
+                            <p class="text-xs text-gray-500 italic mt-2">Dettagli tecnici 2</p>
+                        </div>
+                        
+                        <div class="snap-start shrink-0 w-[90vw] md:w-[700px]">
+                            <img src="TAV_tattica.jpg" class="w-full h-[500px] object-cover mb-3 border border-gray-100 img-hover" alt="Tavola 7">
+                            <p class="text-xs text-gray-500 italic mt-2">Estimo, tavola tattica</p>
+                        </div>
+                        
+                        <div class="snap-start shrink-0 w-[90vw] md:w-[700px]">
+                            <img src="TAV_ACB.jpg" class="w-full h-[500px] object-cover mb-3 border border-gray-100 img-hover" alt="Tavola 8">
+                            <p class="text-xs text-gray-500 italic mt-2">Estimo, tavola analisi costi benefici</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project: Re-box -->
+                <div class="mb-20">
+                    <div class="mb-6 flex flex-col md:flex-row md:items-baseline md:justify-between">
+                        <h4 class="text-xl font-medium"><span class="font-semibold">Re-box:</span> container</h4>
+                        <p class="text-sm text-gray-500 uppercase tracking-widest mt-2 md:mt-0">Cambiano, 2025</p>
+                    </div>
+                    <p class="text-sm text-gray-600 mb-8 font-light leading-relaxed max-w-4xl">Il progetto è pensato per essere realizzato con tecnologie costruttive off-site e sostenibili. L’intero edificio è concepito volumetricamente come un unico blocco compatto, che si sviluppa attorno ad una corte interna permeabile, dotata di una copertura leggera in sughero. Lo sviluppo della struttura avviene su due livelli, collegati tra loro tramite una rampa esterna, che diventa anche l'elemento principale del progetto, fungendo da portale per chi arriva dalla stazione di Cambiano.</p>
+                    <p class="text-xs text-gray-500 mb-8 tracking-wide">
+                        <span class="uppercase tracking-widest text-gray-400 mr-2">Progetto di gruppo:</span>
+                        Sofia Romoli, Cecilia Moretti
+                    </p>
+                    <div class="flex overflow-x-auto project-scroll gap-6 pb-6 snap-x">
+                        <!-- 2 Intro Photos -->
+                        <div class="snap-start shrink-0 w-[90vw] md:w-[700px]">
+                            <img src="GR9 Tav Manifesto copia.jpg" class="w-full h-[500px] object-cover mb-3 border border-gray-100 img-hover" alt="Tavola 1">
+                            <p class="text-xs text-gray-500 italic mt-2">Manifesto</p>
+                        </div>
+                        <!-- 1 Book -->
+                        <div class="snap-start shrink-0 w-[80vw] md:w-[400px]">
+                            <!-- AGGIUNGI QUESTO TAG <a> CHE PUNTA AL TUO PDF -->
+                            <a href="GR9 Portfolio copia.pdf" target="_blank" class="block group">
+                                <img src="cope.jpg"
+                                     class="w-full h-[500px] object-cover mb-3 border border-gray-100 img-hover group-hover:opacity-90 transition-opacity"
+                                     alt="Book">
+                            </a>
+                            <p class="text-xs text-gray-500">Analisi di progetto</p>
+                        </div>
+                </div>
+
+                <!-- Project: Banaue Lodge -->
+                <div class="mb-10">
+                    <div class="mb-6 flex flex-col md:flex-row md:items-baseline md:justify-between">
+                        <h4 class="text-xl font-medium"><span class="font-semibold">Banaue Lodge:</span> concorso</h4>
+                        <p class="text-sm text-gray-500 uppercase tracking-widest mt-2 md:mt-0">Filippine, 2024</p>
+                    </div>
+                    <p class="text-sm text-gray-600 mb-8 font-light leading-relaxed max-w-4xl">Ostello su palafitte, tra le risaie, per ospitare un turismo sostenibile, che rispetti le tradizioni della tribù Ifugao che vive in quest'area. Il progetto è caratterizzato dalla sostenibilità dei materiali, infatti è totalmente pensato attraverso materiali di scarto del riso e con elementi portanti in bambù, reperibili a chilometro zero. Troviamo tre volumi su due livelli, uno interamente dedicato agli spazi comuni, uno per i servizi e l'ultimo che ospita sei camere distinte.</p>
+                    <p class="text-xs text-gray-500 mb-8 tracking-wide">
+                        <span class="uppercase tracking-widest text-gray-400 mr-2">Progetto di gruppo:</span>
+                        Sofia Romoli, Marco Mariotti
+                    </p>
+                    <div class="flex overflow-x-auto project-scroll gap-6 pb-6 snap-x">
+                    
+                        <!-- 2 Tavole -->
+                        <div class="snap-start shrink-0 w-[90vw] md:w-[700px]">
+                            <img src="TAV_b3 copia 2.jpg" class="w-full h-[500px] object-cover mb-3 border border-gray-100 img-hover" alt="Tavola 1">
+                            <p class="text-xs text-gray-500 italic mt-2">Render</p>
+                        </div>
+                        <div class="snap-start shrink-0 w-[90vw] md:w-[700px]">
+                            <img src="TAV_b1.jpg" class="w-full h-[500px] object-cover mb-3 border border-gray-100 img-hover" alt="Tavola 1">
+                            <p class="text-xs text-gray-500 italic mt-2">Contesto</p>
+                        </div>
+                        <div class="snap-start shrink-0 w-[90vw] md:w-[700px]">
+                            <img src="TAV_b3.jpg" class="w-full h-[500px] object-cover mb-3 border border-gray-100 img-hover" alt="Tavola 10">
+                            <p class="text-xs text-gray-500 italic mt-2">Piante piano terra e primo</p>
+                        </div>
+                        <div class="snap-start shrink-0 w-[90vw] md:w-[700px]">
+                            <img src="TAV_b3 copia.jpg" class="w-full h-[500px] object-cover mb-3 border border-gray-100 img-hover" alt="Tavola 10">
+                            <p class="text-xs text-gray-500 italic mt-2">Sezione</p>
+                        </div>
+                        <div class="snap-start shrink-0 w-[90vw] md:w-[700px]">
+                            <img src="TAV_b2.jpg" class="w-full h-[500px] object-cover mb-3 border border-gray-100 img-hover" alt="Tavola 10">
+                            <p class="text-xs text-gray-500 italic mt-2">Render</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ================= THEME 2: URBANISTICA ================= -->
+            <section class="mb-32">
+                <h3 class="text-xs font-semibold uppercase tracking-[0.2em] text-gray-500 mb-12 border-b border-gray-200 pb-2">02 — Urbanistica</h3>
+
+                <!-- Project: Costanta -->
+                <div class="mb-20">
+                    <div class="mb-6 flex flex-col md:flex-row md:items-baseline md:justify-between">
+                        <h4 class="text-xl font-medium"><span class="font-semibold">Costanta:</span> infrastrutture militari</h4>
+                        <p class="text-sm text-gray-500 uppercase tracking-widest mt-2 md:mt-0">Romania, 2025</p>
+                    </div>
+                    <p class="text-sm text-gray-600 mb-8 font-light leading-relaxed max-w-4xl">Ricerca sull'espansione della base NATO Mihail Kogalniceanu e sulla frammentazione dello spazio circostante. Attraverso un'analisi di ricerca a diverse scale, da quella europea a quella locale, il confine viene letto non come una semplice linea ma come un sistema articolato di strade, vuoti e accessi controllati, che rende selettiva l'accessibilità e crea una forte frammentazione spaziale. Lo studio è focalizzato sull'influenza che hanno le basi NATO e le infrastrutture militari sul paesaggio.</p>
+                    <p class="text-xs text-gray-500 mb-8 tracking-wide">
+                        <span class="uppercase tracking-widest text-gray-400 mr-2">Progetto di gruppo:</span>
+                        Sofia Romoli, Cecilia Moretti, Rozerin Aytek, Adam Kyriakou, Afra Mislina Genc
+                    </p>
+                    <div class="flex overflow-x-auto project-scroll gap-6 pb-6 snap-x">
+                        <!-- 1 Book -->
+                        <div class="snap-start shrink-0 w-[80vw] md:w-[400px]">
+                            <!-- AGGIUNGI QUESTO TAG <a> CHE PUNTA AL TUO PDF -->
+                            <a href="C1_Militarized.pdf" target="_blank" class="block group">
+                                <img src="constanta.jpg"
+                                     class="w-full h-[500px] object-cover mb-3 border border-gray-100 img-hover group-hover:opacity-90 transition-opacity"
+                                     alt="Book">
+                            </a>
+                            <p class="text-xs text-gray-500">Book</p>
+                        </div>
+                        <!-- 4 Tavole -->
+                        <div class="snap-start shrink-0 w-[90vw] md:w-[700px]">
+                            <img src="Map_3.jpg" class="w-full h-[500px] object-cover mb-3 border border-gray-100 img-hover" alt="Tavola 1">
+                            <p class="text-xs text-gray-500 italic mt-2">Mappa  Constanta</p>
+                        </div>
+                        <div class="snap-start shrink-0 w-[90vw] md:w-[700px]">
+                            <img src="Last_map.jpg" class="w-full h-[500px] object-cover mb-3 border border-gray-100 img-hover" alt="Tavola 2">
+                            <p class="text-xs text-gray-500 italic mt-2">Mappa concettuale militarizzazione</p>
+                        </div>
+                        <div class="snap-start shrink-0 w-[90vw] md:w-[700px]">
+                            <img src="photoshop.jpg" class="w-full h-[500px] object-cover mb-3 border border-gray-100 img-hover" alt="Tavola 3">
+                            <p class="text-xs text-gray-500 italic mt-2">Assonometria concettuale</p>
+                        </div>
+                        <div class="snap-start shrink-0 w-[90vw] md:w-[700px]">
+                            <img src="mappa.jpg" class="w-full h-[500px] object-cover mb-3 border border-gray-100 img-hover" alt="Tavola 10">
+                            <p class="text-xs text-gray-500 italic mt-2">Mappa Mihail Kolganiceanu</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project: Fiumicino -->
+                <div class="mb-10">
+                    <div class="mb-6 flex flex-col md:flex-row md:items-baseline md:justify-between">
+                        <h4 class="text-xl font-medium"><span class="font-semibold">Fiumicino:</span> spazi agricoli</h4>
+                        <p class="text-sm text-gray-500 uppercase tracking-widest mt-2 md:mt-0">Fiumicino, 2024</p>
+                    </div>
+                    <p class="text-sm text-gray-600 mb-8 font-light leading-relaxed max-w-4xl">Studio urbanistico e territoriale sugli spazi agricoli di Fiumicino, con focus sull'azienda agricola F. Mengoni, che mette in relazione analisi cartografica a scala territoriale e locale con strategie di progetto sociali e sostenibili; legati al rischio idrogeologico presente nell'area di Fiumicino e al problema del capolarato.</p>
+                    <p class="text-xs text-gray-500 mb-8 tracking-wide">
+                        <span class="uppercase tracking-widest text-gray-400 mr-2">Progetto di gruppo:</span>
+                        Sofia Romoli, Marco Mariotti, Flavio Passarelli
+                    </p>
+                    <div class="flex overflow-x-auto project-scroll gap-6 pb-6 snap-x">
+                        <!-- 8 Tavole -->
+                        <div class="snap-start shrink-0 w-[90vw] md:w-[700px]">
+                            <img src="urb1.jpg" class="w-full h-[500px] object-cover mb-3 border border-gray-100 img-hover" alt="Tavola 1">
+                            <p class="text-xs text-gray-500 italic mt-2">Mappa inquadramento Fiumicino</p>
+                        </div>
+                        <div class="snap-start shrink-0 w-[90vw] md:w-[700px]">
+                            <img src="urb2.jpg" class="w-full h-[500px] object-cover mb-3 border border-gray-100 img-hover" alt="Tavola 2">
+                            <p class="text-xs text-gray-500 italic mt-2">Mappa scala locale</p>
+                        </div>
+                        <div class="snap-start shrink-0 w-[90vw] md:w-[700px]">
+                            <img src="urb3.jpg" class="w-full h-[500px] object-cover mb-3 border border-gray-100 img-hover" alt="Tavola 3">
+                            <p class="text-xs text-gray-500 italic mt-2">Mappa di progetto</p>
+                        </div>
+                        <div class="snap-start shrink-0 w-[90vw] md:w-[700px]">
+                            <img src="tav_urb2.jpg" class="w-full h-[500px] object-cover mb-3 border border-gray-100 img-hover" alt="Tavola 4">
+                            <p class="text-xs text-gray-500 italic mt-2">Assonometria generale</p>
+                        </div>
+                        <div class="snap-start shrink-0 w-[90vw] md:w-[700px]">
+                            <img src="tav_urb5.jpg" class="w-full h-[500px] object-cover mb-3 border border-gray-100 img-hover" alt="Tavola 5">
+                            <p class="text-xs text-gray-500 italic mt-2">Assonometria di progetto</p>
+                        </div>
+                        <div class="snap-start shrink-0 w-[90vw] md:w-[700px]">
+                            <img src="tav_urb4.jpg" class="w-full h-[500px] object-cover mb-3 border border-gray-100 img-hover" alt="Tavola 6">
+                            <p class="text-xs text-gray-500 italic mt-2">Assonometria di progetto</p>
+                        </div>
+                        <div class="snap-start shrink-0 w-[90vw] md:w-[700px]">
+                            <img src="tav_urb1.jpg" class="w-full h-[500px] object-cover mb-3 border border-gray-100 img-hover" alt="Tavola 7">
+                            <p class="text-xs text-gray-500 italic mt-2">Analisi sociale</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ================= THEME 3: RESTAURO ================= -->
+            <section class="mb-32">
+                <h3 class="text-xs font-semibold uppercase tracking-[0.2em] text-gray-500 mb-12 border-b border-gray-200 pb-2">03 — Restauro</h3>
+
+                <!-- Project: Tor di Nona -->
+                <div class="mb-10">
+                    <div class="mb-6 flex flex-col md:flex-row md:items-baseline md:justify-between">
+                        <h4 class="text-xl font-medium"><span class="font-semibold">Domus Artis:</span> restauro</h4>
+                        <p class="text-sm text-gray-500 uppercase tracking-widest mt-2 md:mt-0">Roma, 2024</p>
+                    </div>
+                    <p class="text-sm text-gray-600 mb-8 font-light leading-relaxed max-w-4xl">Intervento di analisi e restauro su un edificio storico a Tor di Nona, fondato su rilievo diretto, lettura stratigrafica e tecnologica, dai solai e coperture fino agli ammattonati e agli infissi. Dopo l'analisi si è pensato alla rifunzionalizzazione, tramite spazi culturali dedicati alle arti e ai cittadini, mantendendo le tradizionali botteghe al piano terra. </p>
+                    <p class="text-xs text-gray-500 mb-8 tracking-wide">
+                        <span class="uppercase tracking-widest text-gray-400 mr-2">Progetto di gruppo:</span>
+                        Sofia Romoli, Sara Tronci, Francesco Vinau, Noémie Goutenègre
+                    </p>
+                    <div class="flex overflow-x-auto project-scroll gap-6 pb-6 snap-x">
+                        <!-- 17 Tavole -->
+                        <div class="snap-start shrink-0 w-[90vw] md:w-[700px]">
+                            <img src="TV_3.jpg" class="w-full h-[500px] object-cover mb-3 border border-gray-100 img-hover" alt="Tavola 1">
+                            <p class="text-xs text-gray-500 italic mt-2">Inquadramento</p>
+                        </div>
+                        <div class="snap-start shrink-0 w-[90vw] md:w-[700px]">
+                            <img src="TV_4.jpg" class="w-full h-[500px] object-cover mb-3 border border-gray-100 img-hover" alt="Tavola 2">
+                            <p class="text-xs text-gray-500 italic mt-2">Tavola a mano rilievo 1</p>
+                        </div>
+                        <div class="snap-start shrink-0 w-[90vw] md:w-[700px]">
+                            <img src="TV_5.jpg" class="w-full h-[500px] object-cover mb-3 border border-gray-100 img-hover" alt="Tavola 3">
+                            <p class="text-xs text-gray-500 italic mt-2">Tavola a mano rilievo 2</p>
+                        </div>
+                        <div class="snap-start shrink-0 w-[90vw] md:w-[700px]">
+                            <img src="TV_7.jpg" class="w-full h-[500px] object-cover mb-3 border border-gray-100 img-hover" alt="Tavola 4">
+                            <p class="text-xs text-gray-500 italic mt-2">Sezioni, scala 1:50</p>
+                        </div>
+                        <div class="snap-start shrink-0 w-[90vw] md:w-[700px]">
+                            <img src="TV_8.jpg" class="w-full h-[500px] object-cover mb-3 border border-gray-100 img-hover" alt="Tavola 5">
+                            <p class="text-xs text-gray-500 italic mt-2">Sezione, scala 1:50</p>
+                        </div>
+                        <div class="snap-start shrink-0 w-[90vw] md:w-[700px]">
+                            <img src="TV_9.jpg" class="w-full h-[500px] object-cover mb-3 border border-gray-100 img-hover" alt="Tavola 6">
+                            <p class="text-xs text-gray-500 italic mt-2">Tavola dettaglio solaio</p>
+                        </div>
+                        <div class="snap-start shrink-0 w-[90vw] md:w-[700px]">
+                            <img src="TV_10.jpg" class="w-full h-[500px] object-cover mb-3 border border-gray-100 img-hover" alt="Tavola 7">
+                            <p class="text-xs text-gray-500 italic mt-2">Tavola dettaglio coperture</p>
+                        </div>
+                        <div class="snap-start shrink-0 w-[90vw] md:w-[700px]">
+                            <img src="TV_11.jpg" class="w-full h-[500px] object-cover mb-3 border border-gray-100 img-hover" alt="Tavola 8">
+                            <p class="text-xs text-gray-500 italic mt-2">Tavola di progetto</p>
+                        </div>
+                        <div class="snap-start shrink-0 w-[90vw] md:w-[700px]">
+                            <img src="TV_12.jpg" class="w-full h-[500px] object-cover mb-3 border border-gray-100 img-hover" alt="Tavola 10">
+                            <p class="text-xs text-gray-500 italic mt-2">Piante di progetto</p>
+                        </div>
+                        <div class="snap-start shrink-0 w-[90vw] md:w-[700px]">
+                            <img src="TV_13.jpg" class="w-full h-[500px] object-cover mb-3 border border-gray-100 img-hover" alt="Tavola 10">
+                            <p class="text-xs text-gray-500 italic mt-2">Sezione B-B, scala 1:50</p>
+                        </div>
+                        <div class="snap-start shrink-0 w-[90vw] md:w-[700px]">
+                            <img src="TV_14.jpg" class="w-full h-[500px] object-cover mb-3 border border-gray-100 img-hover" alt="Tavola 10">
+                            <p class="text-xs text-gray-500 italic mt-2">Sezione A-A, scala 1:50</p>
+                        </div>
+                        <div class="snap-start shrink-0 w-[90vw] md:w-[700px]">
+                            <img src="LINK_DELLA_TUA_IMMAGINE_2.jpg" class="w-full h-[500px] object-cover mb-3 border border-gray-100 img-hover" alt="Tavola 10">
+                            <p class="text-xs text-gray-500 italic mt-2">Prospetti, scala 1:200</p>
+                        </div>
+                        <div class="snap-start shrink-0 w-[90vw] md:w-[700px]">
+                            <img src="TV_15.jpg" class="w-full h-[500px] object-cover mb-3 border border-gray-100 img-hover" alt="Tavola 10">
+                            <p class="text-xs text-gray-500 italic mt-2">Tavola dettaglio ammattonati</p>
+                        </div>
+                        <div class="snap-start shrink-0 w-[90vw] md:w-[700px]">
+                            <img src="TV_16.jpg" class="w-full h-[500px] object-cover mb-3 border border-gray-100 img-hover" alt="Tavola 10">
+                            <p class="text-xs text-gray-500 italic mt-2">Tavola dettaglio finestre</p>
+                        </div>
+                        <div class="snap-start shrink-0 w-[90vw] md:w-[700px]">
+                            <img src="TV_17.jpg" class="w-full h-[500px] object-cover mb-3 border border-gray-100 img-hover" alt="Tavola 10">
+                            <p class="text-xs text-gray-500 italic mt-2">Spaccato assonometrico</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ================= THEME 4: PRODOTTO ================= -->
+            <section class="mb-10">
+                <h3 class="text-xs font-semibold uppercase tracking-[0.2em] text-gray-500 mb-12 border-b border-gray-200 pb-2">04 — Prodotto</h3>
+
+                <!-- Project: Spin -->
+                <div class="mb-20">
+                    <div class="mb-6 flex flex-col md:flex-row md:items-baseline md:justify-between">
+                        <h4 class="text-xl font-medium"><span class="font-semibold">Spin:</span> seduta mobile</h4>
+                        <p class="text-sm text-gray-500 uppercase tracking-widest mt-2 md:mt-0">Roma, 2024</p>
+                    </div>
+                    <p class="text-sm text-gray-600 mb-8 font-light leading-relaxed max-w-4xl">Progetto di una seduta mobile sviluppato attraverso la definizione dei dettagli costruttivi, l'esploso dei componenti e la visualizzazione finale del prodotto. Pensata per essere inserita nel contesto del quartiere di Torre Vecchia a Roma e progettata in maniera congiunta agli abitanti.</p>
+                    <p class="text-xs text-gray-500 mb-8 tracking-wide">
+                        <span class="uppercase tracking-widest text-gray-400 mr-2">Progetto di gruppo:</span>
+                        Sofia Romoli, Marco Mariotti, Raffaele Ianovici, Andrea Menditto, Federica Piraccini, Francesco Vinau
+                    </p>
+                    <div class="flex overflow-x-auto project-scroll gap-6 pb-6 snap-x">
+                        <!-- 2 Tavole -->
+                        <div class="snap-start shrink-0 w-[90vw] md:w-[700px]">
+                            <img src="render1 copia.jpg" class="w-full h-[500px] object-cover mb-3 border border-gray-100 img-hover" alt="Tavola 1">
+                            <p class="text-xs text-gray-500 italic mt-2">Render</p>
+                        </div>
+                        <div class="snap-start shrink-0 w-[90vw] md:w-[700px]">
+                            <img src="t1.jpg" class="w-full h-[500px] object-cover mb-3 border border-gray-100 img-hover" alt="Tavola 2">
+                            <p class="text-xs text-gray-500 italic mt-2">Dettagli costruttuvi</p>
+                        </div>
+                        <div class="snap-start shrink-0 w-[90vw] md:w-[700px]">
+                            <img src="ass.jpg" class="w-full h-[500px] object-cover mb-3 border border-gray-100 img-hover" alt="Tavola 2">
+                            <p class="text-xs text-gray-500 italic mt-2">Esploso</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project: Cubo -->
+                <div class="mb-10">
+                    <div class="mb-6 flex flex-col md:flex-row md:items-baseline md:justify-between">
+                        <h4 class="text-xl font-medium"><span class="font-semibold">Cubo:</span> caos</h4>
+                        <p class="text-sm text-gray-500 uppercase tracking-widest mt-2 md:mt-0">Immaginario, 2025</p>
+                    </div>
+                    <p class="text-sm text-gray-600 mb-8 font-light leading-relaxed max-w-4xl">Esplorazione progettuale sul tema del caos a partire dalla figura geometrica del cubo, tramite l'uso di Grasshopper.</p>
+                    <div class="flex overflow-x-auto project-scroll gap-6 pb-6 snap-x">
+                        <!-- 3 Tavole -->
+                        <div class="snap-start shrink-0 w-[90vw] md:w-[700px]">
+                            <img src="PHOTO-2026-11-19-13-45-39.jpg" class="w-full h-[500px] object-cover mb-3 border border-gray-100 img-hover" alt="Concept">
+                            <p class="text-xs text-gray-500 italic mt-2">Concept</p>
+                        </div>
+                        <div class="snap-start shrink-0 w-[90vw] md:w-[700px]">
+                            <img src="PHOTO-2026-11-19-13-45-39 2.jpg" class="w-full h-[500px] object-cover mb-3 border border-gray-100 img-hover" alt="Concept">
+                            <p class="text-xs text-gray-500 italic mt-2">Concept</p>
+                        </div>
+                        <div class="snap-start shrink-0 w-[90vw] md:w-[700px]">
+                            <img src="book1.jpg" class="w-full h-[500px] object-cover mb-3 border border-gray-100 img-hover" alt="Tavola 2">
+                            <p class="text-xs text-gray-500 italic mt-2">Tavola concettuale</p>
+                        </div>
+                        <div class="snap-start shrink-0 w-[90vw] md:w-[700px]">
+                            <img src="book.jpg" class="w-full h-[500px] object-cover mb-3 border border-gray-100 img-hover" alt="Tavola 3">
+                            <p class="text-xs text-gray-500 italic mt-2">Tavola concettuale</p>
+                        </div>
+                        <!-- 1 Book -->
+                        <div class="snap-start shrink-0 w-[80vw] md:w-[400px]">
+                            <!-- AGGIUNGI QUESTO TAG <a> CHE PUNTA AL TUO PDF -->
+                            <a href="book_rapp.pdf" target="_blank" class="block group">
+                                <img src="cop.jpg"
+                                     class="w-full h-[500px] object-cover mb-3 border border-gray-100 img-hover group-hover:opacity-90 transition-opacity"
+                                     alt="Book">
+                            </a>
+                            <p class="text-xs text-gray-500">Book</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- FOTOGRAFIA -->
+        <section id="fotografia" class="pt-24 pb-32 border-t border-gray-200">
+            <div class="max-w-screen-2xl mx-auto px-6">
+                <h2 class="text-3xl font-medium tracking-tight mb-16 uppercase">Fotografia</h2>
+
+                <div id="foto-grid" class="columns-1 sm:columns-2 lg:columns-3 gap-8"></div>
+
+                <script>
+                    const fotoGallery = [
+                        { src: 'foto1.jpg', caption: 'Bambino che gioca - Ponte Mammolo, Roma' },
+                        { src: 'foto2.jpg', caption: 'Vita urbana - Ponte Mammolo, Roma' },
+                        { src: 'foto3.jpg', caption: 'Scale - Villaggio Matteotti, Terni' },
+                        { src: 'foto4.jpg', caption: 'Cité Radieuse - Marsiglia' },
+                        { src: 'foto5.jpg', caption: 'MAXXI - Roma' },
+                        { src: 'foto6.jpg', caption: 'Pista 500 - Lingotto, Torino' },
+                        { src: 'foto7.jpg', caption: 'Abbandono - Parco Michelotti, Torino' },
+                        { src: 'foto8.jpg', caption: 'Matericità - Santuario di Monte Grisa, Trieste' },
+                        { src: 'foto9.jpg', caption: 'Verde - Belgrado' },
+                        { src: 'foto10.jpg', caption: 'Passerella Olimpica - Lingotto, Torino' },
+                                         { src: 'foto12.jpg', caption: 'Nuvola - EUR, Roma' },
+                        { src: 'foto11.jpg', caption: 'Scale - Cité Radieuse, Marsiglia' }
+                    ];
+
+                    const fotoGrid = document.getElementById('foto-grid');
+                    fotoGrid.innerHTML = fotoGallery.map((item, idx) => {
+                        const i = idx + 1;
+                        return `
+                        <div class="break-inside-avoid mb-10">
+                            <img src="${item.src}" class="w-full h-auto object-cover mb-3 img-hover bg-gray-100" alt="Fotografia ${i}">
+                            <p class="text-xs text-gray-500 leading-relaxed">${item.caption}</p>
+                        </div>
+                        `;
+                    }).join('');
+                </script>
+            </div>
+        </section>
+
+    <!-- INFO E CONTATTI -->
+    <section id="info" class="pt-24 pb-32 bg-black text-white border-t border-gray-900">
+        <div class="max-w-screen-2xl mx-auto px-6">
+            <h2 class="text-3xl font-medium tracking-tight mb-16 uppercase">Info & Contatti</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-12">
+                <!-- Profile Image -->
+                <div class="md:col-span-4 lg:col-span-3">
+                    <img src="foto.jpg" class="w-full object-cover img-hover" alt="Sofia Romoli">
+                </div>
+                
+                <!-- Text Details -->
+                <div class="md:col-span-8 lg:col-span-9 flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-xs font-semibold uppercase tracking-[0.2em] text-gray-500 mb-6 border-b border-gray-800 pb-2">Profilo</h3>
+                        <p class="text-lg md:text-xl font-light leading-relaxed mb-12 text-gray-300">
+                        Sono Sofia Romoli, laureanda magistrale in Architettura al Politecnico di Torino. Il mio percorso si concentra sulla progettazione architettonica e urbana, con un approccio che integra il dialogo con il patrimonio esistente, la fisica dell’edificio e la modellazione parametrica. Dalle strategie di rigenerazione territoriale al dettaglio costruttivo, cerco soluzioni rigorose che uniscano fattibilità tecnica, efficienza energetica e qualità spaziale.
+                        </p>
+
+                        <h3 class="text-xs font-semibold uppercase tracking-[0.2em] text-gray-500 mb-6 border-b border-gray-800 pb-2">Formazione</h3>
+                        <div class="space-y-4 text-gray-300 font-light">
+                            <p><strong>2022/2025</strong> - Laurea Triennale L-17 presso Università degli Studi RomaTre</p>
+                            <p><strong>2025/ora</strong> - Laurea Magistrale LM-4 presso Politecnico di Torino</p>
+                            <p>2024 - Tirocinio presso studio Z14 Alessandro Ridolfi </p>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-16">
+                        <h3 class="text-xs font-semibold uppercase tracking-[0.2em] text-gray-500 mb-6 border-b border-gray-800 pb-2">Contatti</h3>
+                        <div class="flex flex-col space-y-2 text-lg font-light">
+                            <a href="sofiaromoli00@gmail.com" class="hover:text-gray-400 transition-colors inline-block w-fit"> sofiaromoli00@gmail.com</a>
+                            <a href="tel:+393894931574" class="hover:text-gray-400 transition-colors inline-block w-fit">+39 389 4931574</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-black text-gray-600 text-xs py-8 text-center border-t border-gray-900">
+        <p>© 2026 Sofia Romoli. Tutti i diritti riservati.</p>
+    </footer>
+    <!-- Lightbox / Visualizzazione Tavola Intera -->
+    <div id="lightbox" class="fixed inset-0 z-[100] hidden bg-black/90 backdrop-blur-sm flex items-center justify-center p-4 md:p-10" onclick="closeLightbox(event)">
+        <button id="lightbox-close" type="button" aria-label="Chiudi" class="fixed top-6 right-6 text-white/80 hover:text-white text-3xl leading-none z-[110] cursor-pointer">&times;</button>
+        <div class="max-w-[92vw] max-h-[90vh] flex flex-col items-center" onclick="event.stopPropagation()">
+            <img id="lightbox-img" src="" alt="" class="max-w-full max-h-[80vh] w-auto h-auto object-contain border border-white/15 bg-white">
+            <p id="lightbox-caption" class="text-xs md:text-sm text-gray-300 italic mt-4 text-center max-w-2xl"></p>
+        </div>
+    </div>
+    <!-- Mobile Menu Script -->
+        <script>
+            const btn = document.getElementById('mobile-menu-btn');
+            const menu = document.getElementById('mobile-menu');
+            const links = document.querySelectorAll('.mobile-link');
+
+            btn.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+            });
+
+            links.forEach(link => {
+                link.addEventListener('click', () => {
+                    menu.classList.add('hidden');
+                });
+            });
+        </script>
+
+        <!-- 1. PRIMA PARTE: HTML del Lightbox -->
+        <div id="lightbox" class="fixed inset-0 z-[100] hidden bg-black/90 backdrop-blur-sm flex items-center justify-center p-4 md:p-10" onclick="closeLightbox(event)">
+            <button id="lightbox-close" type="button" aria-label="Chiudi" class="fixed top-6 right-6 text-white/80 hover:text-white text-3xl leading-none z-[110] cursor-pointer">&times;</button>
+            <div class="max-w-[92vw] max-h-[90vh] flex flex-col items-center" onclick="event.stopPropagation()">
+                <img id="lightbox-img" src="" alt="" class="max-w-full max-h-[80vh] w-auto h-auto object-contain border border-white/15 bg-white">
+                <p id="lightbox-caption" class="text-xs md:text-sm text-gray-300 italic mt-4 text-center max-w-2xl"></p>
+            </div>
+        </div>
+
+        <!-- 2. SECONDA PARTE: Script che attiva il click sulle tavole -->
+        <script>
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            const lightboxCaption = document.getElementById('lightbox-caption');
+            const lightboxClose = document.getElementById('lightbox-close');
+
+            document.querySelectorAll('#portfolio img, #fotografia img').forEach(img => {
+                if (img.closest('a[href$=".pdf"]')) return;
+
+                img.classList.add('cursor-zoom-in');
+                img.addEventListener('click', () => {
+                    const src = img.getAttribute('src');
+                    if (!src || src === '.' || src.includes('LINK_DELLA_TUA_IMMAGINE')) return;
+
+                    const captionEl = img.parentElement.querySelector('p');
+                    lightboxImg.src = src;
+                    lightboxImg.alt = img.alt || '';
+                    lightboxCaption.textContent = captionEl ? captionEl.textContent.trim() : (img.alt || '');
+                    lightbox.classList.remove('hidden');
+                    document.body.style.overflow = 'hidden';
+                });
+            });
+
+            function hideLightbox() {
+                lightbox.classList.add('hidden');
+                lightboxImg.src = '';
+                document.body.style.overflow = '';
+            }
+
+            function closeLightbox(event) {
+                if (event.target === lightbox) hideLightbox();
+            }
+
+            lightboxClose.addEventListener('click', hideLightbox);
+
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && !lightbox.classList.contains('hidden')) {
+                    hideLightbox();
+                }
+            });
+        </script>
+    </body>
+    <!-- Mobile Menu Script -->
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const links = document.querySelectorAll('.mobile-link');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        links.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+    </script>
+    <!-- Protezione e Watermark automatico su Tavole e Fotografie -->
+    <style>
+        .protected-media {
+            position: relative;
+            overflow: hidden;
+        }
+        .protected-media::after {
+            content: "© Sofia Romoli";
+            position: absolute;
+            bottom: 10px;
+            right: 12px;
+            font-size: 4px;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.85);
+            background: rgba(17, 17, 17, 0.55);
+            padding: 3px 8px;
+            pointer-events: none;
+            z-index: 15;
+        }
+    </style>
+
+    <script>
+        // Applica il marchio © Sofia Romoli su tutte le tavole e foto
+        document.querySelectorAll('#portfolio img, #fotografia img').forEach(img => {
+            if (img.closest('a[href$=".pdf"]')) return; // esclude le copertine dei book PDF
+
+            const wrapper = document.createElement('div');
+            wrapper.className = 'protected-media w-full';
+            img.parentNode.insertBefore(wrapper, img);
+            wrapper.appendChild(img);
+        });
+
+        // Disabilita tasto destro e trascinamento sulle immagini
+        document.addEventListener('contextmenu', (e) => {
+            if (e.target.tagName === 'IMG') e.preventDefault();
+        });
+        document.addEventListener('dragstart', (e) => {
+            if (e.target.tagName === 'IMG') e.preventDefault();
+        });
+    </script>
+</body>
+</html>
