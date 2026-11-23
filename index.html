@@ -971,32 +971,27 @@
             if (e.target.tagName === 'IMG') e.preventDefault();
         });
     </script>
-    <!-- Protezione immagini su Desktop e Mobile (iOS/Android) -->
     <style>
       img {
         -webkit-user-select: none;
         user-select: none;
         -webkit-user-drag: none;
         -webkit-touch-callout: none;
-        pointer-events: none; /* Impedisce al tocco su iPhone di agganciare l'immagine */
       }
     </style>
 
     <script>
-      // Blocca il tasto destro su tutta la pagina (utile anche con pointer-events: none)
       document.addEventListener("contextmenu", function (e) {
-        e.preventDefault();
+        if (e.target.closest("img, .lightbox, .modal")) {
+          e.preventDefault();
+        }
       });
 
-      // Blocca il trascinamento su desktop
       document.addEventListener("dragstart", function (e) {
-        e.preventDefault();
+        if (e.target.closest("img")) {
+          e.preventDefault();
+        }
       });
-
-      // Blocca il menu di pressione prolungata su touch screen
-      document.addEventListener("touchstart", function (e) {
-        if (e.touches.length > 1) return;
-      }, { passive: true });
     </script>
 </body>
 </html>
